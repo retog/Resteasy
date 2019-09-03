@@ -40,3 +40,6 @@ myDB.script
 myDB.properties
 
 .DS_Store
+.factorypath
+nb-configuration.xml
+nbactions.xml

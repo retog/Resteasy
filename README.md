@@ -1,5 +1,32 @@
 # RESTEasy
 
+
+## Note about this repo
+
+This is a hopefully short-lived fork of [resteasy](https://github.com/resteasy/Resteasy) including 
+[PR 2152](https://github.com/resteasy/Resteasy/pull/2152) and [PR 2153](https://github.com/resteasy/Resteasy/pull/2153). 
+
+This project implements the JAX-RS-mod-qs specification which you can read [here](https://github.com/factsmission/jax-rs-spec/).
+
+The master branch contains some more changes to allow selected components to be available as version `4.4.0-mod-qs`
+to be available from the maven repository with URI https://raw.github.com/retog/Resteasy/mvn-repo/.
+
+If you want to use these artifacts in your project, add the following to your project's `pom.xml` file:
+
+```
+    <repositories>
+        <repository>
+            <id>resteasy-mvn-repo</id>
+            <url>https://raw.github.com/retog/Resteasy/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+```
+---
+
 [![Build Status](https://travis-ci.org/resteasy/Resteasy.svg?branch=master)](https://travis-ci.org/resteasy/Resteasy)
 
 RESTEasy is a JBoss.org project aimed at providing productivity frameworks for developing client and server RESTful applications and services in Java.  It is mainly a JAX-RS implementation but you'll find some other experimental code in the repository.
