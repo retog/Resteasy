@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.jboss.resteasy</groupId>
-  <artifactId>resteasy-core-spi</artifactId>
+  <artifactId>resteasy-core</artifactId>
   <versioning>
     <release>4.4.0-mod-qs</release>
     <versions>
       <version>4.4.0-mod-qs</version>
     </versions>
-    <lastUpdated>20190903143050</lastUpdated>
+    <lastUpdated>20190903143145</lastUpdated>
   </versioning>
 </metadata>

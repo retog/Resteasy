@@ -7,8 +7,8 @@
         <version>4.4.0-mod-qs</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>resteasy-core-spi</artifactId>
-    <name>RESTEasy JAX-RS Core SPI</name>
+    <artifactId>resteasy-core</artifactId>
+    <name>RESTEasy JAX-RS Core</name>
     <description/>
     <packaging>jar</packaging>
 
@@ -21,6 +21,17 @@
         <dependency>
             <groupId>org.jboss.spec.javax.xml.bind</groupId>
             <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet</groupId>
+            <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-core-spi</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
@@ -72,6 +83,15 @@
             <artifactId>activation</artifactId>
         </dependency>
 
+        <!-- Used by org.jboss.resteasy.plugins.server.tjws.* -->
+        <!--
+        <dependency>
+            <groupId>tjws</groupId>
+            <artifactId>webserver</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        -->
+
         <!-- Required by Hibernate Validator 5.x for testing -->
         <dependency>
             <groupId>org.jboss.spec.javax.el</groupId>
@@ -90,6 +110,21 @@
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging-processor</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.microprofile.config</groupId>
+            <artifactId>microprofile-config-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.smallrye</groupId>
+            <artifactId>smallrye-config</artifactId>
+            <exclusions>
+               <exclusion>
+                  <groupId>javax.annotation</groupId>
+                  <artifactId>javax.annotation-api</artifactId>
+               </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>
@@ -99,23 +134,6 @@
                 <artifactId>clover-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <pluginManagement>
-           <plugins>
-	          <plugin>
-	             <groupId>org.apache.maven.plugins</groupId>
-	             <artifactId>maven-javadoc-plugin</artifactId>
-	             <configuration>
-	                <additionalDependencies>
-	                   <additionalDependency>
-	                      <groupId>org.jboss.resteasy</groupId>
-	                      <artifactId>resteasy-core</artifactId>
-	                      <version>${project.version}</version>
-	                   </additionalDependency>
-	                </additionalDependencies>
-	             </configuration>
-	          </plugin>
-           </plugins>
-        </pluginManagement>
     </build>
     <profiles>
         <profile>
