@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>resteasy-client-api</artifactId>
-    <name>RESTEasy JAX-RS Client API</name>
+    <artifactId>resteasy-client</artifactId>
+    <name>RESTEasy JAX-RS Client</name>
 
     <dependencies>
         <dependency>
@@ -20,7 +20,17 @@
 
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-core-spi</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -34,6 +44,24 @@
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging-processor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-client</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.ws.rs</groupId>
