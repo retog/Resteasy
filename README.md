@@ -8,8 +8,7 @@ This is a hopefully short-lived fork of [resteasy](https://github.com/resteasy/R
 
 This project implements the JAX-RS-mod-qs specification which you can read [here](https://github.com/factsmission/jax-rs-spec/).
 
-The master branch contains some more changes to allow selected components to be available as version `4.4.0-mod-qs`
-to be available from the maven repository with URI https://raw.github.com/retog/Resteasy/mvn-repo/.
+The master branch contains some more changes to allow selected components to be available as version `4.4.0-mod-qs` from the maven repository with URI https://raw.github.com/retog/Resteasy/mvn-repo/.
 
 If you want to use these artifacts in your project, add the following to your project's `pom.xml` file:
 
